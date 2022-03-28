@@ -1,0 +1,41 @@
+{
+    "name": "helaplus/sms",
+    "description": "A laravel 9 package to send SMS via common providers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Le-Yo",
+            "email": "leo@helaplus.com",
+            "homepage": "https://helaplus.com"
+        }
+    ],
+    "homepage": "https://github.com/helaplus/sms",
+    "keywords": ["Laravel", "Sms"],
+    "require": {
+        "illuminate/support": "~9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Helaplus\\Sms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Helaplus\\Sms\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Helaplus\\Sms\\SmsServiceProvider"
+            ],
+            "aliases": {
+                "Sms": "Helaplus\\Sms\\Facades\\Sms"
+            }
+        }
+    }
+}
