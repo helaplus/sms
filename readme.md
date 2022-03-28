@@ -5,7 +5,11 @@
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+
+A laravel 9 package to send SMS via common providers
+
+Take a look at [contributing.md](contributing.md) to see a to do list.
+
 
 ## Installation
 
@@ -15,7 +19,13 @@ Via Composer
 $ composer require helaplus/sms
 ```
 
+``` bash
+WASILIANA_SENDER_NAME
+WASILIANA_API_KEY
+```
+
 ## Usage
+
 
 ## Change log
 
