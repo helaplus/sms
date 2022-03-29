@@ -33,10 +33,8 @@ class ATSmsController extends Controller
         $response = curl_exec($curl);
 
         curl_close($curl);
-        $data = [
-            'message' => $response,
-        ];
-        return JsonResponse::create($data,200);
+       
+        return $response;
     }
 }
 
