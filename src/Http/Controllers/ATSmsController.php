@@ -18,12 +18,12 @@ class ATSmsController extends Controller
             CURLOPT_URL => "https://api.africastalking.com/version1/messaging",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_MAXREDIRS => 10, 
             CURLOPT_TIMEOUT => 0,
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "username=".config('sms.username')."&to=$to&message=$sms&from=".config('sms.at_sender_name'),
+            CURLOPT_POSTFIELDS => "username=".config('sms.at_username')."&to=$to&message=$sms&from=".config('sms.at_sender_name'),
             CURLOPT_HTTPHEADER => array(
                 "apikey: ".config('sms.at_api_key'),
                 "Content-Type: application/x-www-form-urlencoded"
