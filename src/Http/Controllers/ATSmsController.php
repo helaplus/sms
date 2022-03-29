@@ -2,6 +2,7 @@
 
 namespace Helaplus\Sms\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class ATSmsController extends Controller
@@ -29,7 +30,7 @@ class ATSmsController extends Controller
             ),
         ));
 
-        $response = curl_exec($curl); 
+        $response = curl_exec($curl);
 
         curl_close($curl);
         $data = [
