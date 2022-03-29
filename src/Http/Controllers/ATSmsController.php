@@ -22,14 +22,14 @@ class ATSmsController extends Controller
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "username=".config('sms.at_api_key')."&to=$tel&message=$sms&from=".config('sms.at_sender_name'),
+            CURLOPT_POSTFIELDS => "username=".config('sms.at_api_key')."&to=$to&message=$sms&from=".config('sms.at_sender_name'),
             CURLOPT_HTTPHEADER => array(
                 "apikey: ".env('AT_API_KEY'),
                 "Content-Type: application/x-www-form-urlencoded"
             ),
         ));
 
-        $response = curl_exec($curl);
+        $response = curl_exec($curl); 
 
         curl_close($curl);
         $data = [
