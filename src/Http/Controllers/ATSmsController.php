@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ATSmsController extends Controller
 {
-    public static function sendSmsViaAT($to, $message)
+    public static function sendSms($to, $message)
     {
 
         $sms = urlencode($message);
