@@ -14,7 +14,7 @@ class SmsController extends Controller
                 return WasilianaSmsController::sendSms($to,$message);
                 break;
             case 'africastalking':
-                return ATSmsController::sendSms($to,$message);
+                return ATSmsController::sendSmsViaAT($to,$message); 
                 break;
             default :
                 return WasilianaSmsController::sendSms($to,$message);
